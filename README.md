@@ -6,15 +6,15 @@ flicker.v is a verilog module, which flips all its bits per cycle.
 
 ``` Verilog
 //flicker.v
-module flicker(clk,rst_n,dout);
+module flicker(clk, rst_n, dout);
 parameter WIDTH = 5;
-input clk,rst_n;
+input clk, rst_n;
 output reg [WIDTH-1:0] dout;
 
 always@(posedge clk or negedge rst_n)
 
     if(!rst_n)
-        dout <= {WIDTH{1'b0}};
+        dout <= { WIDTH{ 1'b0 } };
     else
         dout <= ~dout;
 
