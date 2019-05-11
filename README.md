@@ -29,10 +29,10 @@ $ verilator -Wall --cc flicker.v --exe simulation.cpp
 ```
 Then, make the project
 ``` Bash
-make -j -C obj_dir/ -f Vflicker.mk Vflicker
+$ make -j -C obj_dir/ -f Vflicker.mk Vflicker
 ```
 Run the executable.
 ``` Bash
-obj_dir/Vflicker 
+$ obj_dir/Vflicker 
 ```
 
