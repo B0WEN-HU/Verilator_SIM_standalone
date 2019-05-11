@@ -1,6 +1,6 @@
 # Verilator_SIM_standalone
 
-This is a Verilator simulation demo, it shows how to work with Verilator in a main program.
+This is a Verilator simulation demo, it shows how to work with Verilator in a main program `simulation.cpp`.
 
 flicker.v is a verilog module, which flips all its bits per cycle.
 
@@ -21,7 +21,7 @@ always@(posedge clk or negedge rst_n)
 endmodule
 ```
 
-Here WIDTH is 5, so output port `dout` would be `0``(00000)_2` after reset by input signal `rst_n`, then switch between `0``(00000)_2` and `31``(11111)_2`.
+Here WIDTH is 5, so output port `dout` would be `0 = (00000)_2` after reset by input signal `rst_n`, then switch between `0 = (00000)_2` and `31 = (11111)_2`.
 
 Use this line to call Verilator compile the flicker.v
 ``` Bash
