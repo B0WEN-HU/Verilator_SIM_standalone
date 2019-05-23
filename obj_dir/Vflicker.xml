@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!-- DESCRIPTION: Verilator output: XML representation of netlist -->
+<verilator_xml>
+  <files>
+    <file id="a" filename="AstRoot" language="1800-2012"/>
+    <file id="b" filename="COMMAND_LINE" language="1800-2012"/>
+    <file id="c" filename="INTERNAL_VERILATOR_DEFINE" language="1800-2012"/>
+    <file id="d" filename="flicker.v" language="1800-2012"/>
+  </files>
+  <netlist>
+    <module fl="d1" name="flicker">
+      <var fl="d3" name="clk" dtype_id="1"/>
+      <var fl="d3" name="rst_n" dtype_id="1"/>
+      <var fl="d4" name="dout" dtype_id="2"/>
+      <always fl="d6">
+        <sentree fl="d6">
+          <senitem fl="d6">
+            <varref fl="d6" name="clk" dtype_id="1"/>
+          </senitem>
+          <senitem fl="d6">
+            <varref fl="d6" name="rst_n" dtype_id="1"/>
+          </senitem>
+        </sentree>
+        <assigndly fl="d11" dtype_id="2">
+          <cond fl="d11" dtype_id="2">
+            <varref fl="d8" name="rst_n" dtype_id="1"/>
+            <not fl="d11" dtype_id="2">
+              <varref fl="d11" name="dout" dtype_id="2"/>
+            </not>
+            <const fl="d9" name="5'h0" dtype_id="2"/>
+          </cond>
+          <varref fl="d11" name="dout" dtype_id="2"/>
+        </assigndly>
+      </always>
+    </module>
+    <typetable fl="a0">
+      <basicdtype  fl="d8" id="1" name="logic"/>
+      <basicdtype  fl="d4" id="2" name="logic" left="4" right="0"/>
+      <basicdtype  fl="d2" id="3" name="logic" left="31" right="0"/>
+    </typetable>
+  </netlist>
+</verilator_xml>

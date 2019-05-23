@@ -38,7 +38,7 @@ int main(int argc, char** argv) {
     }
     
     tb->final();
-    delete tb;
+    delete tb;  
     std::cout << "***SIMULATION END***" << std::endl;
     exit(EXIT_SUCCESS);
 }
