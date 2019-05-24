@@ -2,6 +2,10 @@
 
 void init()
 {
+  int argc = 0;
+  char** argv = NULL;
+  Verilated::commandArgs(argc, argv);
+  
   tb = new Vflicker;
   cycles = 0;
 }

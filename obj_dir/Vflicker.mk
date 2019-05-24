@@ -45,6 +45,7 @@ VM_USER_CLASSES = \
 VM_USER_DIR = \
 	. \
 
+CPPFLAGS += -fPIC 
 
 ### Default rules...
 # Include list of all generated classes
